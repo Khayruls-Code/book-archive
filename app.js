@@ -3,7 +3,7 @@ const error = document.getElementById('error');
 const booksContainer = document.getElementById('books');
 
 //search function implementation
-const getBooks = () => {
+const getBooks = async () => {
     const inputField = document.getElementById('inputField');
     const inputValue = inputField.value;
     if(!inputField.value){
@@ -12,7 +12,8 @@ const getBooks = () => {
         return;
     }
     //getting data by fetch
-    const url = `http://openlibrary.org/search.json?q=${inputValue}`
+    const url = `https://openlibrary.org/search.json?q=${inputValue}`
+
     fetch(url)
         .then(res => res.json())
         .then(data => displayBook(data))
