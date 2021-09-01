@@ -108,3 +108,28 @@ body{
     color: #E32636;
     margin: 20px 0;
 }
+
+
+/* --------responsive---------- */
+
+@media(max-width:1000px){
+    #books{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media(max-width: 768px){
+    #books{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .title h1{
+        font-size: 2rem;
+    }
+    .title blockquote{
+        font-size: 1rem;
+    }
+}
+@media(max-width: 550px){
+    #books{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
